@@ -1,19 +1,41 @@
 import random
 
-rand = random.randrange(1,100)
-print("I'm thinking of a number from 1 to 100.");
+#config
+low = 1
+high = 100
+limit = 10
+
+#start game 
+rand = random.randint(1,100)
+print("I'm thinking of a number from " + str(low) + " to " + str(high) + ".");
 
 guess = -1
+tries = 0
 
-while guess != rand:
-    guess = input("Take a guess: ")
-    guess = int(guess)
+#helper functions
+def get_guess():
+    while True:
+        g = input("Take a guess: ")
+
+        if g.isnumeric():
+            g = int(g)
+            return g
+        else:
+            print("You must enter a number bro.")
+
+#play the game
+while guess != rand and tries < limit:
+    guess = get_guess()
     
     if guess < rand:
-        print("You guessed too low.")
+        print("Too low bro.")
     elif guess > rand:
-        print("You guessed too high.")
-    else:
-        print("You got it!")
+        print("Too high bro.")
 
-print("Game over")
+    tries +=1
+
+#Tell player outcome
+if guess == rand:
+    print("Your a master guesser")
+else:
+    print("You lose. I was thinking of " + str(rand) + ".")
