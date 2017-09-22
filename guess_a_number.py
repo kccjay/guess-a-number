@@ -1,16 +1,25 @@
 
 import random
+import math
 
 # config
 low = 1
-high = 10
-limit = 4
+high = 100
+limit = math.log(high - low + 1, 2)
+limit = math.ceil(limit)
 
 # helper functions
 def show_start_screen():
-    print("**************************")
-    print("**** Guess a Number ! ****")
-    print("**************************")
+    print("__")
+    print("| |")
+    print("____")
+    print("| | |")
+    print("______")
+    print("| | | |")
+    print("________                                 _______")
+    print("| | | | |                                |")
+    print("################################################")
+    
 
 def show_credits():
     print("This awesome game was created by Coop Dogg.")
@@ -26,7 +35,7 @@ def get_guess():
             print("You must enter a number.")
 
 def pick_number():
-    print("I'm thinking of a number from " + str(low) + " to " + str(high) +".")
+    print("I'm thinking of a number from " + str(low) + " to " + str(high) +". You also have " + str(limit) + " atempts to guess my number")
 
     return random.randint(low, high)
 
