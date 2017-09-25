@@ -19,10 +19,14 @@ def show_start_screen():
     print("________                                 _______")
     print("| | | | |                                |")
     print("################################################")
-    
+    print()
+    print()
+    print()
 
 def show_credits():
+    print()
     print("This awesome game was created by Coop Dogg.")
+    print()
     
 def get_guess():
     while True:
@@ -32,35 +36,49 @@ def get_guess():
             guess = int(guess)
             return guess
         else:
+            print()
             print("You must enter a number.")
+            print()
 
 def pick_number():
+    print()
     print("I'm thinking of a number from " + str(low) + " to " + str(high) +". You also have " + str(limit) + " atempts to guess my number")
+    print()
 
     return random.randint(low, high)
 
 def check_guess(guess, rand):
     if guess < rand:
+        print()
         print("You guessed too low.")
+        print()
     elif guess > rand:
+        print()
         print("You guessed too high.")
+        print()
 
 def show_result(guess, rand):
     if guess == rand:
+        print()
         print("You win!")
+        print()
     else:
         print("You are such a loser! The number was " + str(rand) + ".")
+        print()
 
 def play_again():
     while True:
         decision = input("Would you like to play again? (y/n) ")
+        decision = decision.lower()
 
-        if decision == 'y' or decision == 'yes':
+        if decision == 'y' or decision == 'yes' or decision == 'yepper':
             return True
-        elif decision == 'n' or decision == 'no':
+        elif decision == 'n' or decision == 'no' or decision == 'nope':
             return False
         else:
+            print()
             print("I don't understand. Please enter 'y' or 'n'.")
+            print()
 
 def play():
     guess = -1
