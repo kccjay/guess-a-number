@@ -16,8 +16,8 @@ def show_start_screen():
     print("| | |")
     print("______")
     print("| | | |")
-    print("________                                 _______")
-    print("| | | | |                                |")
+    print("________           Guess my number!              ")
+    print("| | | | |                    Please!      ")
     print("################################################")
     print()
     print()
@@ -25,7 +25,7 @@ def show_start_screen():
 
 def show_credits():
     print()
-    print("This awesome game was created by Coop Dogg.")
+    print("This awesome game was created by The Karlito Master.")
     print()
     
 def get_guess():
@@ -69,6 +69,7 @@ def show_result(guess, rand):
 def play_again():
     while True:
         decision = input("Would you like to play again? (y/n) ")
+        #case-insensitive for decision
         decision = decision.lower()
 
         if decision == 'y' or decision == 'yes' or decision == 'yepper':
@@ -77,7 +78,7 @@ def play_again():
             return False
         else:
             print()
-            print("I don't understand. Please enter 'y' or 'n'.")
+            print("Listen pumpkin spice, Please enter 'y' or 'n'!!!")
             print()
 
 def play():
