@@ -10,23 +10,26 @@ limit = math.ceil(limit)
 
 # helper functions
 def show_start_screen():
-    print("__")
-    print("| |")
-    print("____")
-    print("| | |")
-    print("______")
-    print("| | | |")
-    print("________           Guess my number!              ")
-    print("| | | | |                    Please!      ")
-    print("################################################")
-    print()
-    print()
-    print()
+    print("")
+    print("")
+    print("")
+    print("__                                       |>>      ")
+    print("@@\                                      |>>>>  ")
+    print("_!__                                     |>>    ")
+    print("@@@@\                                    |      ")
+    print("_!_!__                                   |      ")
+    print("@@@@@ \                                  |      ")
+    print("_!_!_!__   Guess my number!      ##      |      ##")
+    print("@@@@@@@ \                       ####     |     ####")
+    print("######################################################")
+    print("####                                                ")
+    print("###") 
+    print("##")
 
 def show_credits():
-    print()
-    print("This awesome game was created by The Karlito Master.")
-    print()
+    print("######################################################")
+    print("#This awesome game was created by The Karlito Master.#")
+    print("######################################################")
     
 def get_guess():
     while True:
