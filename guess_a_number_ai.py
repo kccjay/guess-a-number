@@ -9,16 +9,38 @@ import math
 
 # config
 low = 1
-high = 100
+high = 101
 
 # helper functions
 def show_start_screen():
-    print("*************************")
-    print("* &Guess a Number A.I!& *")
-    print("*************************")
+    #guess number ai
+    #:P You have entered my program 
+    print("                                          ")
+    print("   * :P YOU HAVE ENTERED MY PROGRAM *     ")
+    print("                                          ")
+    print("             @@@@@@@@@@@@                 ")
+    print("             @          @                 ")
+    print("             @          @ GUESS AI        ")
+    print("   I AM      @          @@@@@@@@@@@@      ")
+    print("  @@@@@@@@@@@@          @          @      ")
+    print("  @          @          @          @      ")
+    print("  @          @          @          @      ")
+    print("##########################################")
+    print("####    :     :  : :   :     :  :     ####")
+    print("###    :   : WELCOME HUMAN!  :    :    ###")
+    print("## :  :   :    :    :    :     :     :  ##")
+    print("#                                        #")
+    print("#                                        #")
 
 def show_credits():
-    pass
+    print("##########################################")
+    print("# :    :   :  :     :    :       :  ::  :#")
+    print("#  :      :     :          :      :  :   #")
+    print("#    :             :                     #")
+    print("#   :   : GOODBYE MY HUMAN PAWN   :  :   #")
+    print("#    :        :         :       :        #")
+    print("##########################################")
+        
     
 def get_guess(current_low, current_high):
     guess = (current_low + current_high)//2
@@ -26,33 +48,48 @@ def get_guess(current_low, current_high):
     
 
 def pick_number():
-    
-    print("Think of a number between " + str(low) + " and " + str(high) + " and I will try to guess it.")
+    print()
+    print("******************************************")
+    print("*RULES TO MY GAME:                       *")
+    print("*Think before you press enter and your   *")
+    print("*answers include yes, higher, lower.     *")
+    print("******************************************")
+    print()
+    print("Think of a number between " + str(low) + " and " + str(high)+ " and I will try to guess it.")
+    print()
     print()
     input("Please press ENTER to continue...")
 
     
 def check_guess(guess):
-    print("Is your number " + str(guess) + ".")
+    print()
+    print("Is your number " + str(guess) + "??")
+    print()
 
         
     while True:
-        answer = input("Enter yes, lower, higher...")
-
-        if answer == 'yes':
+        answer = input("Enter...")
+        answer = answer.lower()
+        
+        if answer == 'yes' or answer == 'y' or answer == 'yeah':
             return 0
-        elif answer == 'lower':
+        elif answer == 'lower' or answer == 'l':
             return 1
-        elif answer == 'higher':
+        elif answer == 'higher' or answer == 'h':
             return -1
         else:
-            print("Type yes, lower, higher nothing else...")
-    
+            print()
+            print("!!!!!!!!!!!!!!!!!!")
+            print("!Invaild response!")
+            print("!!!!!!!!!!!!!!!!!!")
+            print()
+
 def show_result():
-    """
-    Says the result of the game. (The computer might always win.)
-    """
-    pass
+    print()
+    print("***********************")
+    print("* Yesss I got it!!!!! *")
+    print("***********************")
+    print()
 
 def play_again():
     while True:
