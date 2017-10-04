@@ -8,8 +8,8 @@ import math
 
 
 # config
-low = 1
-high = 101
+low = input()
+high = input()
 
 # helper functions
 def show_start_screen():
@@ -20,7 +20,7 @@ def show_start_screen():
     print("                                          ")
     print("             @@@@@@@@@@@@                 ")
     print("             @          @                 ")
-    print("             @          @ GUESS AI        ")
+    print("             @          @ GUESS AI!       ")
     print("   I AM      @          @@@@@@@@@@@@      ")
     print("  @@@@@@@@@@@@          @          @      ")
     print("  @          @          @          @      ")
@@ -29,7 +29,6 @@ def show_start_screen():
     print("####    :     :  : :   :     :  :     ####")
     print("###    :   : WELCOME HUMAN!  :    :    ###")
     print("## :  :   :    :    :    :     :     :  ##")
-    print("#                                        #")
     print("#                                        #")
 
 def show_credits():
@@ -48,15 +47,18 @@ def get_guess(current_low, current_high):
     
 
 def pick_number():
-    print()
     print("******************************************")
     print("*RULES TO MY GAME:                       *")
-    print("*Think before you press enter and your   *")
+    print("*Think before you press ENTER and your   *")
     print("*answers include yes, higher, lower.     *")
     print("******************************************")
     print()
-    print("Think of a number between " + str(low) + " and " + str(high)+ " and I will try to guess it.")
+    print("Pick two numbers as a range and I'll guess ")
+    print("between those two numbers.")
     print()
+    high = input("Highest Number?...")
+    print()
+    low = input("Lowest Number?...")
     print()
     input("Please press ENTER to continue...")
 
