@@ -8,8 +8,6 @@ import math
 
 
 # config
-low = input()
-high = input()
 
 # helper functions
 def show_start_screen():
@@ -60,12 +58,15 @@ def pick_number():
     print()
     low = input("Lowest Number?...")
     print()
+    name = input("Hey by the way what's your name?...")
+    print()
     input("Please press ENTER to continue...")
 
-    
+    return int(low), int(high), name
+
 def check_guess(guess):
     print()
-    print("Is your number " + str(guess) + "??")
+    print("Hey" + name + " is your number " + str(guess) + "??")
     print()
 
         
@@ -75,15 +76,15 @@ def check_guess(guess):
         
         if answer == 'yes' or answer == 'y' or answer == 'yeah':
             return 0
-        elif answer == 'lower' or answer == 'l':
+        elif answer == 'lower' or answer == 'l' or answer == 'low':
             return 1
-        elif answer == 'higher' or answer == 'h':
+        elif answer == 'higher' or answer == 'h' or answer == 'high':
             return -1
         else:
             print()
-            print("!!!!!!!!!!!!!!!!!!")
-            print("!Invaild response!")
-            print("!!!!!!!!!!!!!!!!!!")
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            print("!Invaild response " + name + "!")
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
             print()
 
 def show_result():
@@ -105,11 +106,9 @@ def play_again():
             print("I don't understand. Please enter 'y' or 'n'.")
 
 def play():
-    current_low = low
-    current_high = high
     check = -1
     
-    pick_number()
+    current_low, current_high = pick_number()
     
     while check != 0:
         guess = get_guess(current_low, current_high)
