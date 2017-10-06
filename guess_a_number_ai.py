@@ -54,24 +54,23 @@ def pick_number():
     print("Pick two numbers as a range and I'll guess ")
     print("between those two numbers.")
     print()
-    high = input("Highest Number?...")
+    high = input("Highest Number?... ")
     print()
-    low = input("Lowest Number?...")
+    low = input("Lowest Number?... ")
     print()
-    name = input("Hey by the way what's your name?...")
-    print()
-    input("Please press ENTER to continue...")
+    input("Please press ENTER to continue... ")
 
-    return int(low), int(high), name
+    return int(low), int(high)
+
 
 def check_guess(guess):
     print()
-    print("Hey" + name + " is your number " + str(guess) + "??")
+    print("Hey is your number " + str(guess) + "??")
     print()
 
         
     while True:
-        answer = input("Enter...")
+        answer = input("Enter... ")
         answer = answer.lower()
         
         if answer == 'yes' or answer == 'y' or answer == 'yeah':
@@ -82,9 +81,9 @@ def check_guess(guess):
             return -1
         else:
             print()
-            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-            print("!Invaild response " + name + "!")
-            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            print("!!!!!!!!!!!!!!!!!!")
+            print("!Invaild response!")
+            print("!!!!!!!!!!!!!!!!!!")
             print()
 
 def show_result():
@@ -103,7 +102,7 @@ def play_again():
         elif decision == 'n' or decision == 'no':
             return False
         else:
-            print("I don't understand. Please enter 'y' or 'n'.")
+            print("I don't understand. Please enter 'y' or 'n'. ")
 
 def play():
     check = -1
